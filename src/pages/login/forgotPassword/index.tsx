@@ -1,0 +1,23 @@
+import { SubTitle, TitleText } from "@/components";
+import { ForgotPasswordForm } from "@/components/forms";
+import { AuthLayout } from "@/components/layout";
+import React, { Fragment, ReactElement } from "react";
+
+const Page = () => {
+  return (
+    <Fragment>
+      <TitleText> Forgot password</TitleText>
+      <SubTitle maxWidth={"70%"} mt={"1rem"} mb={"5rem"}>
+        Don’t worry! It happens. please enter the address associated with your
+        account.
+      </SubTitle>
+      <ForgotPasswordForm />
+    </Fragment>
+  );
+};
+
+Page.getLayout = function getLayout(page: ReactElement) {
+  return <AuthLayout>{page}</AuthLayout>;
+};
+
+export default Page;
